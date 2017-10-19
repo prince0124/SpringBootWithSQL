@@ -1,0 +1,11 @@
+---
+# yml for custom data connector
+applications:
+  - name: testLocal
+    buildpack: https://github.com/cloudfoundry/java-buildpack.git#v3.14
+    path: target/PracticeDemo-0.0.1-SNAPSHOT.jar
+    memory: 3G
+    timeout: 180
+    env:
+      SPRING_PROFILES_ACTIVE: cloud
+      MEMORY_LIMIT: 2G
